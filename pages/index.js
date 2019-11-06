@@ -11,7 +11,6 @@ import { graphql } from "react-apollo";
 const Corona = dynamic(() => import("../components/Corona"), { ssr: false });
 
 function index(props) {
-  console.log(process.env.BACK_END_URL);
   const [entered, setEnter] = useState(false);
   const blockerRef = useRef(null);
   const auth = useSelector(state => state.authenticated);

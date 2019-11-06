@@ -1,7 +1,0 @@
-{
-  "build": {
-    "env": {
-      "BACK_END_URL": "@BACK_END_URL"
-    }
-  }
-}
