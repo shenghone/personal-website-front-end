@@ -45,7 +45,8 @@
     "react-redux": "^7.1.1",
     "redux": "^4.0.4",
     "slate": "^0.47.8",
-    "slate-react": "^0.22.9"
+    "slate-react": "^0.22.9",
+    "webpack": "^4.41.2"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",

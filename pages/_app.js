@@ -5,13 +5,12 @@ import withApolloClient from "../lib/with-apollo-client";
 import { ApolloProvider } from "react-apollo";
 import { Provider } from "react-redux";
 import { store } from "../redux";
-require("dotenv").config();
 
 class MyApp extends App {
   static displayName = "MyApp";
   render() {
     const { Component, pageProps, apolloClient } = this.props;
-
+    console.log(process.env.BACK_END_URL);
     return (
       <Container>
         <ApolloProvider client={apolloClient}>
