@@ -1,0 +1,7 @@
+{
+  "build": {
+    "env": {
+      "BACK_END_URL": "https://sheng-back-end.herokuapp.com"
+    }
+  }
+}
