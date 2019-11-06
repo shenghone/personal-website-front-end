@@ -5,6 +5,7 @@ import withApolloClient from "../lib/with-apollo-client";
 import { ApolloProvider } from "react-apollo";
 import { Provider } from "react-redux";
 import { store } from "../redux";
+require("dotenv").config();
 
 class MyApp extends App {
   static displayName = "MyApp";
