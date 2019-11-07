@@ -12,7 +12,6 @@ app.prepare().then(() => {
   server.use(compression());
 
   server.get("/", (req, res) => {
-    console.log(process.env.BACK_END_URL);
     return app.render(req, res, "/index", req.query);
   });
 
