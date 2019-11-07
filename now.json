@@ -1,5 +1,5 @@
 {
   "env": {
-    "BACK_END_URL": "https://sheng-back-end.herokuapp.com"
+    "BACK_END_URL": "@back_end_url"
   }
 }
