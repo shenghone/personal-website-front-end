@@ -12,6 +12,7 @@ app.prepare().then(() => {
   server.use(compression());
 
   server.get("/", (req, res) => {
+    console.log(process.env.BACK_END_URL);
     return app.render(req, res, "/index", req.query);
   });
 
@@ -30,8 +31,6 @@ app.prepare().then(() => {
   server.get("/publish", (req, res) => {
     return app.render(req, res, "/publish", req.query);
   });
-
-
 
   server.get("/article/:id", (req, res) => {
     return app.render(req, res, "/article", { id: req.params.id });
