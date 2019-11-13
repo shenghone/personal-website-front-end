@@ -1,6 +1,7 @@
 import React from "react";
-import Navbar from "./Navbar";
+import dynamic from "next/dynamic";
 import MyName from "./MyName";
+const Navbar = dynamic(() => import("./Navbar"));
 
 export default ({ children }) => (
   <div>

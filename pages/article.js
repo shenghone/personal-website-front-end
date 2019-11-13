@@ -4,11 +4,7 @@ import ArticleBody from "../components/ArticleBody";
 
 const article = props => {
   console.log(props);
-  return (
-    <Layout>
-      <ArticleBody articleId={props.articleId} />
-    </Layout>
-  );
+  return <Layout>{/*<ArticleBody articleId={props.articleId} />*/}</Layout>;
 };
 
 article.getInitialProps = async ({ query: { id } }) => {

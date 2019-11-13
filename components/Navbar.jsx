@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useLayoutEffect } from "react";
 import { TweenMax, Expo } from "gsap";
 import { useSelector } from "react-redux";
 import { graphql, compose } from "react-apollo";
@@ -25,7 +25,7 @@ function Navbar({ router, ...props }) {
 
   //if current url is "/article" or "/publish",
   //move the navbar to the top
-  useEffect(() => {
+  useLayoutEffect(() => {
     TweenMax.set(linkWrapperRef.current, {
       opacity: 0
     });
@@ -93,7 +93,7 @@ function Navbar({ router, ...props }) {
     }
   }, [props, width]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     TweenMax.set(navRef.current.children, { opacity: 1, y: 0 });
     TweenMax.staggerFrom(
       navRef.current.children,
