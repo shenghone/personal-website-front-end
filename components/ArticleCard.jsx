@@ -11,7 +11,7 @@ const ArticleCard = props => {
   const { title, content, id, createdAt } = props;
 
   const handleRoute = toPage => {
-    Router.push(`/article/${toPage}`);
+    Router.push(`/article/${toPage}`, `/article/${toPage}`);
   };
 
   const getFirstParagraph = data => {
