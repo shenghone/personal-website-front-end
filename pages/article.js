@@ -3,7 +3,6 @@ import Layout from "../components/Layout";
 import ArticleBody from "../components/ArticleBody";
 
 function article(props) {
-  console.log(props);
   return (
     <Layout>
       <ArticleBody articleId={props.id} />
