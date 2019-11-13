@@ -7,7 +7,7 @@ import { useRandomtext } from "../customHook";
 import { TweenMax } from "gsap";
 
 const ArticleCard = props => {
-  console.log(props);
+  console.log(”articlecard);
   const bgRef = useRef(null);
   const { title, content, id, createdAt } = props;
 
