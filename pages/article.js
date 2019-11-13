@@ -1,7 +1,5 @@
 import React from "react";
 import Layout from "../components/Layout";
-import dynamic from "next/dynamic";
-import { useRouter } from "next/router";
 import ArticleBody from "../components/ArticleBody";
 
 function article(props) {
