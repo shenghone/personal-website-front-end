@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import ArticleCard from "../components/ArticleCard";
 
 function blog({ data, ...rest }) {
+  console.log(data, rest);
   return (
     <Layout>
       <div className="blogBodyWrapper">
