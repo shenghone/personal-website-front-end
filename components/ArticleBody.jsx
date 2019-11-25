@@ -278,7 +278,7 @@ class ArticleBody extends React.Component {
 
   render() {
     const { MeQuery, NewArticleMutation, ArticleQuery } = this.props;
-    console.log(this.props);
+
     return (
       <div>
         <div className="blogEditorWrapper">
