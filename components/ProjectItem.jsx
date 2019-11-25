@@ -192,6 +192,8 @@ const ProjectItem = function(props) {
           }
 
           .pictureContainer {
+            display: grid;
+            align-self: center;
             position: absolute;
             right: 0;
             width: 600px;
@@ -260,7 +262,6 @@ const ProjectItem = function(props) {
             font-weight: bold;
             padding-bottom: 0.5rem;
           }
-
 
           @media screen and (max-width: 995px) {
             .projectItemWrapper {
