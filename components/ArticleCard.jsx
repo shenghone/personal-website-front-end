@@ -19,15 +19,17 @@ const ArticleCard = props => {
 
   const getFirstParagraph = data => {
     const doc = JSON.parse(content).document;
-    let firstParagraph = "";
     let wordCount = 0;
-    doc.nodes[0].nodes.forEach(n => {
-      firstParagraph += n.text;
-    });
-    if (firstParagraph.split(" ").length > 30) {
-      firstParagraph += " ...";
+    // doc.nodes[0].nodes.forEach(n => {
+    //   firstParagraph += n.text;
+    // });
+    const firstParagraph = doc.nodes[0].nodes.reduce((result, {text}) => `${result}${text}`, '');
+
+    const firstParagraphItems = doc.nodes[0].nodes.map(({text}) => text );
+    if (firstParagraphItems.length > 30) {
+      firstParagraphItems.push(" ...");
     }
-    return firstParagraph;
+    return firstParagraphItems.join('');
   };
   const handleEnter = () => {
     const animate = () => {
