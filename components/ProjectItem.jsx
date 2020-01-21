@@ -253,6 +253,7 @@ const ProjectItem = function(props) {
             letter-spacing: 0.07rem;
             line-height: 1.5rem;
             font-weight: 500;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
           }
           h2 {
             font-size: 1.45rem;
