@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { graphql, compose } from "react-apollo";
+import React from "react";
+import { graphql } from "react-apollo";
 import { ArticlesQuery } from "../graphql/Article";
 import Layout from "../components/Layout";
 import ArticleCard from "../components/ArticleCard";
@@ -10,7 +10,7 @@ function blog({ data, ...rest }) {
       <div className="blogBodyWrapper">
         {!data || !data.Articles
           ? null
-          : data.Articles.map(article => {
+          : data.Articles.map((article) => {
               return (
                 <ArticleCard
                   id={article.id}

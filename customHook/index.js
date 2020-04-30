@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { TimelineMax, Power0, Power4 } from "gsap";
 import _ from "lodash";
 
 //get random characters from the ref element being passed in
@@ -38,17 +39,20 @@ export const useRandomtext = (textRef, index) => {
 };
 
 export const useWidth = () => {
-  const [width, setWidth] = useState(window.innerWidth);
-  const resize = () => {
-    let newWidth = window.innerWidth;
-    setWidth(newWidth);
-  };
-  useEffect(() => {
-    window.addEventListener("resize", resize);
-    resize();
-    return () => {
-      window.removeEventListener("resize", resize);
+  if (typeof window !== "undefined") {
+    const [width, setWidth] = useState(null);
+    const resize = () => {
+      let newWidth = window.innerWidth;
+      setWidth(newWidth);
     };
-  }, []);
-  return width;
+    useEffect(() => {
+      window.addEventListener("resize", _.debounce(resize, 300));
+      resize();
+      return () => {
+        window.removeEventListener("resize", _.debounce(resize, 300));
+      };
+    });
+    return width;
+  }
+  return null;
 };

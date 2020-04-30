@@ -1,9 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Mutation } from "react-apollo";
 import { TweenMax, TimelineMax, Expo } from "gsap";
-import { gql } from "apollo-boost";
 
-const ProjectItem = function(props) {
+const ProjectItem = function (props) {
   const imageRef = useRef(null);
   const imageContainerRef = useRef(null);
   const pictureContainerRef = useRef(null);
@@ -27,19 +25,19 @@ const ProjectItem = function(props) {
   const handleEnter = () => {
     TweenMax.set(imageContainerRef.current, {
       css: {
-        zIndex: 3
-      }
+        zIndex: 3,
+      },
     });
   };
   const handleLeave = () => {
     TweenMax.set(imageContainerRef.current, {
       css: {
-        zIndex: -1
-      }
+        zIndex: -1,
+      },
     });
   };
 
-  const getText = val => {
+  const getText = (val) => {
     val++;
     if (val.toString().length < 2) {
       return `0${val}`;
@@ -49,53 +47,53 @@ const ProjectItem = function(props) {
   useEffect(() => {
     TweenMax.set(titleRef.current, {
       y: 0,
-      opacity: 1
+      opacity: 1,
     });
     TweenMax.from(titleRef.current, 1, {
       y: -10,
       delay: 0.7,
-      opacity: 0
+      opacity: 0,
     });
 
     TweenMax.set(descriptionRef.current, {
       y: 0,
-      opacity: 1
+      opacity: 1,
     });
     TweenMax.from(descriptionRef.current, 1, {
       y: -10,
       delay: 1.4,
-      opacity: 0
+      opacity: 0,
     });
 
     TweenMax.set(frontEndRef.current, {
       x: 0,
-      opacity: 1
+      opacity: 1,
     });
 
     TweenMax.from(frontEndRef.current, 1, {
       x: -10,
       delay: 2,
-      opacity: 0
+      opacity: 0,
     });
 
     TweenMax.set(backEndRef.current, {
       x: 0,
-      opacity: 1
+      opacity: 1,
     });
     TweenMax.from(backEndRef.current, 1, {
       x: -10,
       delay: 2,
-      opacity: 0
+      opacity: 0,
     });
 
     TweenMax.set(numberRef.current, {
       x: 0,
-      opacity: 1
+      opacity: 1,
     });
     TweenMax.from(numberRef.current, 1, {
       delay: 2.4,
       x: 30,
-      opacity: 0
+      opacity: 0,
     });
   }, [props.currentProject]);
 
@@ -104,21 +102,21 @@ const ProjectItem = function(props) {
     const et1 = new TimelineMax();
     //for image, when it's loaded, fade in
     et.set(imageRef.current, {
-      opacity: 0
+      opacity: 0,
     }).to(imageRef.current, 1.2, {
-      opacity: 1
+      opacity: 1,
     });
 
     et1
       .set(imageContainerRef.current, {
         x: 30,
-        opacity: 0
+        opacity: 0,
       })
       .to(imageContainerRef.current, 1.2, {
         delay: 1.4,
         opacity: 1,
         x: 0,
-        ease: Expo.easeIn
+        ease: Expo.easeIn,
       });
   }, [finishedLoading, imageRef, imageContainerRef, props.currentProject]);
   const {
@@ -127,7 +125,7 @@ const ProjectItem = function(props) {
     Link,
     Asset,
     Title,
-    Description
+    Description,
   } = props.currentProject;
   const { Index } = props;
   return (
