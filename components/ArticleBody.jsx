@@ -404,7 +404,7 @@ class ArticleBody extends React.Component {
               border-radius: 2px;
               padding: 10px;
               width: 60vw;
-              margin: 120px 0 150px 0;
+              margin: 240px 0 150px 0;
               height: 100%;
               color: #fff;
               position: absolute;
