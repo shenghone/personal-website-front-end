@@ -243,7 +243,7 @@ const AboutContent = React.memo(function(props) {
               <div>a</div>
               <div>i</div>
             </h2>
-            <p>toronto based web developer</p>
+            <p>Canada based web developer</p>
           </div>
           <ul ref={ulRef}>
             <li>
